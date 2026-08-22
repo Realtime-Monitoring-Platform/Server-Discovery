@@ -86,7 +86,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           mvn -B verify sonar:sonar \
-            -Dsonar.organization=realtime-monitoring-platform-service \
+            -Dsonar.organization=realtime-monitoring-platform \
             -Dsonar.projectKey=Realtime-Monitoring-Platform_Server-Discovery \
             -Dsonar.projectName=discovery-server \
             -Dsonar.host.url=https://sonarcloud.io \
