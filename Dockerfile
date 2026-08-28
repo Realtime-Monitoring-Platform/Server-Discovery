@@ -5,9 +5,9 @@ COPY pom.xml .
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=builder /app/target/*.jar /app/app.jar
-EXPOSE 9000
+EXPOSE 8761
 
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
